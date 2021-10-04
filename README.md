@@ -129,6 +129,12 @@ ones, we created the following bots.
   <img src="https://raw.githubusercontent.com/robertson809/lemonade/main/fig/equations.png" alt="drawing" width="600"/>
 </p>
 
+where 
+
+<p align="center">
+    
+  <img src="https://raw.githubusercontent.com/robertson809/lemonade/main/fig/gamma_equation.png" alt="drawing" width="200"/>
+</p>
 
 
 denotes a metric which provides
@@ -138,14 +144,12 @@ to their past position and if not if they are playing a strategy in which they a
 it’s evaluation of these two conditions EA-Squared tries
 to optimize it’s position for the next round.
 In our implementation, we kept the suggested values of
-ρ= 0. 5 ,γ= 0. 75 ,andtol= 0 .1, however we performed
+ρ = 0.5, γ = 0.75 ,and <i>tol</i>= 0.1, however we performed
 two key differences compared to 2. Firstly we assumed in
-the second part that the! is a typographical mistake and
+the second part that the "!" is a typographical mistake and
 ignored it. Furthermore we did not employ the Stick and
-Carrot method to lure opponents offtheir current strategy and instead just took our past position and moved one
-back. The idea hereby was to provide a rather simplistic pattern that could possibly allure an opponent to vary
-from their current strategy at which point EA-squared
-hopefully would be able to gain control again.
+Carrot method to lure opponents off their current strategy and instead just took our past position and moved one
+back. The idea hereby was to provide a rather simplistic pattern that could possibly allure an opponent to vary from their current strategy at which point EA-squared hopefully would be able to gain control again.
 
 
 <p align="center">
@@ -160,17 +164,10 @@ et al.
   </p>
 
 - EA^2 Beater: As we assumed the meta game would be
-    dominated by the EA-Squared strategy we tried to design a bot to try and exploit this overabundance of a single strategy. Our main idea here was to try to focus on a
-    weakness of EA-Squared which is that if the condition of
-    (si>fi+tol&sj> fj+tol) is triggered by the player
-    playing EA-Squared, they will set their <i>stickCounter</i> to a
-    constant value ofT. AssumingTis greater 0 this means
-    that in any future round EA-squared will always stick in
-    its current position. So in essence we wanted to create a
-    bot that will stick until EA-Sqaured, if anybody is playing that strategy, would go into the branch of setting their <i>stickCounter</i> and at that point switch strategies. The strategy we decided to switch to was maxUtil, which takes in
-both players last position and then tries all positions and
+    dominated by the EA-Squared strategy we tried to design a bot to try and exploit this overabundance of a single strategy. Our main idea here was to try to focus on a weakness of EA-Squared which is that if the condition of
+    (<i>s<sub>i</sub> > f<sub>i</sub> + tol & s<sub>j</sub> > f<sub>j</sub> + tol</i>) is triggered by the player playing EA-Squared, they will set their <i>stickCounter</i> to a constant value of <i>T</i>. Assuming <i>T</i> is greater 0 this means that in any future round EA-squared will always stick in its current position. So in essence we wanted to create a bot that will stick until EA-Sqaured, if anybody is playing that strategy, would go into the branch of setting their <i>stickCounter</i> and at that point switch strategies. The strategy we decided to switch to was maxUtil, which takes in both players last position and then tries all positions and
 returns the position that will provide the highest utility
-assuming both other players stick. We assumed this scenario as the only time thatTis set, is if both other non EA
+assuming both other players stick. We assumed this scenario as the only time that <i>T</i> is set, is if both other non EA
 players have a significantly high stick index.
 
 ## Experiments
@@ -184,7 +181,7 @@ more directly observe the effects of the agents’ strategies on
 each other by having them play with a FiveOClockBot rather
 than with two other complex agents. This testing set-up also
 confirmed the tendency of high-level players to seemingly
-"overthink" the game and lose to low-leveler players.
+"overthink" the game and lose to lower-level players.
 In the following table, the row/column intersection of two
 bots holds the winner of their matchup, with FiveOClockBot
 as the third player. In parentheses next to the name of the
@@ -201,10 +198,7 @@ or 66 out of 210.
 To determine which agent to enter into the tournament,
 we tested ours against each other, and recorded the average scores over three games of length 10,000, though scores
 varied little between rounds. We attempted to distill the effects of the agents strategies on each other by having them
-play with a FiveOClock bot. This testing set-up exposed the
-tendency of high-level players to seemingly ”overthink” the
-game and lose to low-leveler players.
-
+play with a FiveOClock bot.
 
 Bot EA^2 ModifiedConstant EA^2 Beater
 ACTR FOCB(9.6) FOCB(9.6) ACTR(10)
@@ -241,7 +235,7 @@ EA^2 in many cases, and even lost to FiveOClockBot.
 We assume that the turn by turn interaction between EA-SquaredBeater and EA^2 often did not play in the way we had
 predicted. We reached the suprising conclusion that <b>stick</b>
 seemed to be a dominant strategy against a variety of levels
-of strategies. With more time, we would consider reexamining the design of EA-Squared Beater, as we have faith in
+of strategies. With more time, we would consider re-examining the design of EA-Squared Beater, as we have faith in
 the potential of attempting to implement all the complexity
 of EA^2 in normal play, and invoking a specific sub-strategy
 if we encounter another EA^2 -type agent. For example, we
@@ -255,7 +249,7 @@ been shutoff, for example by aggressively offering a sandwich to the third playe
 Michael Robertson implemented the CoOpp and Modified-Constant agents, as well as the sandwich recognition, offering, and accepting mechanisms. Fabio von Schelling Goldman implemented ACTR, EA-Squared and EA-Squared
 Beater. Both ran multiple experiments and performed debugging, however Michael Robertson ran the final experiment which provided our results. Fabio wrote the abstract,
 parts of the background and experiments, and the conclusion. Michael wrote the introduction, the other parts of the
-background and experiments as well as the results. Both authors tested and debugged the Bots. Both authors proof-read
+background and experiments as well as the results. Both authors tested and debugged the Bots. Both authors proofread
 and made small edits throughout the entire paper.
 
 ## References
