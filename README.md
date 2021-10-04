@@ -200,24 +200,17 @@ we tested ours against each other, and recorded the average scores over three ga
 varied little between rounds. We attempted to distill the effects of the agents strategies on each other by having them
 play with a FiveOClock bot.
 
-Bot EA^2 ModifiedConstant EA^2 Beater
-ACTR FOCB(9.6) FOCB(9.6) ACTR(10)
-CoOpp EA^2 (11) FOCB(11) FOCB(11)
+<p align="center">
+    
+  <img src="https://raw.githubusercontent.com/robertson809/lemonade/main/fig/table12.png" alt="drawing" width="600"/>
+</p>
 
-Table 1: Bot match ups, with the winner
-at the row-column intersection in the table,
-and winning scores in parentheses
-(FOCB=FiveOClockBot)
+<p align="center">
+    
+  <img src="https://raw.githubusercontent.com/robertson809/lemonade/main/fig/table3.png" alt="drawing" width="600"/>
+</p>
 
-Bot ModConst EA^2 Beater CoOpp
-EA^2 EA^2 (11) FOCB(10) EASquared(11)
 
-Table 2: Bot match ups continued
-
-Bot EA^2 Beater Bot CoOpp
-ModConst EA^2 Beater(10) ACTR ACTR(11)
-
-Table 3: Further Matchups
 
 Our analysis disappointingly showed that EA^2 Beater
 failed to beat EA-Squared, and the four victories of
