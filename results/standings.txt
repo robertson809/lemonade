@@ -1,0 +1,32 @@
+StickBot               8.553004
+FiveOClockBot          8.537976  (!!)
+ArsenalBot             8.502054
+CoordinateBot          8.476661
+FollowerBot            8.363921
+JoseZiBot2             8.269413
+Strategist             8.226800
+EASquared              8.217614
+JoseZiBotDef           8.176100
+SquidBot               8.128725
+BrattyKidBot           8.080984
+EASquaredBeater        8.019829
+EABot                  7.981524
+DickinsonBaldiniBot    7.874874
+StickySmartBot         7.818046
+FunBot                 7.795255
+SpongeBot              7.597885
+RandomBot              7.526717
+VeryRandomBot          7.504840
+ChampBot               7.480773
+ChampBot2              7.461424
+RollAgent              7.405581
+
+
+Notes:
+======
+    - Bots that generated runtime errors: StartBot, StubbornBot
+    - Bots that ran too slowly: EA2_BOT, RandoBot, SlowBot
+    - Bot that made illegal moves: CoOpp (returned 13 in some scenarios)
+    - Other notes: EASquared and EASquaredBeater have bad scaling behavior
+      against certain opponents, and will most likely time out in the final
+      tournament
