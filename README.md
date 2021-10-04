@@ -2,6 +2,10 @@
 
 By Michael Robertson and Andrew Miller for Davidson College's Machine Reasoning Homework 2
 
+### Demo
+
+In /src, run Tournament and provide 4 arguements: 3 bots also in the /src folder, as well as the desired number of rounds.
+
 ### Table of Contents:
 - [Abstract](#abstract)
 - [Introduction](#introduction)
