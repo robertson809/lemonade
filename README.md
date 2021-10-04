@@ -58,7 +58,7 @@ However, such an existence only guarantees that perfectly
 rational players who are also aware that all other players
 have the same rationality would have no immediate incentive to change their position once in a equilibrium. Without
 knowledge of other agents reasoning, and without any confidence that the game would ever fall into any Nash equilibrium, we implemented several agent designs found in Wunder et al. and analyzed their performance by testing them
-amongst themselves as well as other basic agents(Wunder et
+amongst themselves as well as other basic agents (Wunder et
 al. 2010). We predicted that others in the class would enter
 these strategies in the tournament, and so we entered agents
 specifically designed to exploit weaknesses of most successful agent in (Wunder et al. 2010), EA^2.
@@ -75,7 +75,6 @@ to optimize our score.
 
 ### Stick
 
-
 As simple as its name suggests, a bot running <i>stick</i> simply
 repeats the same position it held the previous turn, regardless of all other conditions. The supplied “FiveOClockBot”
 exclusively implements this maneuver, and many of our bots
@@ -83,24 +82,19 @@ incorporate it into their overall strategies.
 
 ### Across
 
-
 In this maneuver, the bot assumes that another player is implementing stick, and plays the position across from another.
 
 ### Sandwich
 
 Two players <i>sandwich</i> a third when they each realize that
 one player is sticking and the other also has sandwiching
-capabilities. To “offer” a sandwich, a player must notice another is sticking, then position themselves immediately next
-
-to them. If the third player notices this offer, and places
-itself on the other side of the sticking player, a successful
+capabilities. To "offer" a sandwich, a player must notice another is sticking, then position themselves immediately next to them. If the third player notices this offer, and places itself on the other side of the sticking player, a successful
 sandwich has occurred. The two sandwiching players will
 then presumably continue to sandwich for as long as possible. For long-term sandwiching to occur intentionally, three
 conditions must be met:
 
 1. A player must stick without regard to its own score
-2. One player must have the ability to recognize a sticking
-    player as well as the ability to offer a sandwich
+2. One player must have the ability to recognize a sticking player as well as the ability to offer a sandwich
 3. The other player must have the ability to recognize an offered sandwich and accept it.
 
 
@@ -119,25 +113,16 @@ ones, we created the following bots.
 ### Complex Strategies
 
 - ModifiedConstant: we implemented a Modified Constant
-    bot inspired by the author “Pujara”, who entered it in the
-    tournament run in (Wunder et al. 2010). In our implementation, this bot sticks at a random spot, and only moves to
-    a new random spot if it scores below 7 for three consecutive turns.
-- CoOpp: This Cooperation strategy developed by “RL3”
+    bot inspired by the author "Pujara," who entered it in the
+    tournament run in (Wunder et al. 2010). In our implementation, this bot sticks at a random spot, and only moves to a new random spot if it scores below 7 for three consecutive turns.
+- CoOpp: This Cooperation strategy developed by "RL3"
     in (Wunder et al. 2010) randomly chooses a player to play
     across from, unless it detects a sticky player, in which case
     it will offer a sandwich. In the case that it sees an offer of
     a sandwich, it will accept the offer.
-- ACTR: We were not able to find a paper detailing Lebiere
-    and CMU’sACTR, but we were able to implement it generally by its short description in Wunder et al.’s tourna-
-    ment (Wunder et al. 2010). ACTR follows a simple cycling of three distinct strategies. It either sticks to its last
-    position, goes opposite of the weakest opponent or goes
-    opposite to the strongest opponent.
-- EA^2 : One of the bots we implemented was based on the
-    EA^2 algorithm outlined in (Sykulski et al. 2010). Following their original pseudo code as seen in Figure 2 the
-    algorithm makes use of three distinct formulas.Si, which
-    quantifies the likelihood that playeriwill stick in its last
-    position,fi, which quantifies the likelihood that playeri
-    will follow another player andfi,j, which quantifies the likelihood that player <i>i</i> will follow player <i>j</i>.
+- ACTR: We were not able to find a paper detailing Lebiere and CMU’s ACTR, but we were able to implement it generally by its short description in Wunder et al.’s tournament (Wunder et al. 2010). ACTR follows a simple cycling of three distinct strategies. It either sticks to its last position, goes opposite of the weakest opponent or goes opposite to the strongest opponent.
+- EA^2 : One of the bots we implemented was based on the EA^2 algorithm outlined in (Sykulski et al. 2010). Following their original pseudo code as seen in Figure 2 the
+    algorithm makes use of three distinct formulas. <i>S<sub>i</sub></i>, which quantifies the likelihood that player <i>i</i> will stick in its last position, <i>f<sub>i</sub></i>, which quantifies the likelihood that player <i>i</i> will follow another player and <i>f<sub>i,j</sub></i>, which quantifies the likelihood that player <i>i</i> will follow player <i>j</i>.
 
 <p align="center">
     
